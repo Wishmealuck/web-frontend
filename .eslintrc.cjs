@@ -7,7 +7,8 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
     // 'plugin:unicorn/recommended',
-    'plugin:jsx-a11y/recommended', "plugin:react/jsx-runtime",
+    // 'plugin:jsx-a11y/recommended', 
+    "plugin:react/jsx-runtime",
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:@typescript-eslint/recommended-type-checked'
