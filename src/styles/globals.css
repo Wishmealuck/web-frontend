@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* global.css */
+@layer utilities {
+  .custom-gradient {
+    background: var(--jnjn, linear-gradient(90deg, #ff5655 0%, #d361ff 100%));
+  }
+
+  .custom-gradient-text {
+    background: var(--jnjn, linear-gradient(90deg, #ff5655 0%, #d361ff 100%));
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

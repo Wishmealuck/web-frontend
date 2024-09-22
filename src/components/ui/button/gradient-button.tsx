@@ -1,28 +1,24 @@
 import { Button } from "../button"
 
-export const GradientButton = ({ text, type = "outline" }: { text: string; type?: "outline" }) => {
-  const gradient = "var(--jnjn, linear-gradient(90deg, #FF5655 0%, #D361FF 100%))"
-
+export const GradientButton = ({
+  text,
+  type = "outline",
+  onClick
+}: {
+  text: string
+  type?: "outline"
+  onClick?: () => void
+}) => {
   return (
     <Button
-      variant={type}
-      className='w-full border-solid'
-      style={{
-        borderImage: `${gradient} 1`,
-        borderWidth: "2px", // Set the border width
-        borderStyle: "solid" // Ensure border style is solid
-      }}
+      onClick={onClick}
+      className='custom-gradient flex w-full justify-center rounded p-[0.5px] font-semibold text-white'
     >
-      <h1
-        className='bg-clip-text text-transparent'
-        style={{
-          backgroundImage: gradient,
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text" // For Safari
-        }}
-      >
-        {text}
-      </h1>
+      <span className='mx-auto flex h-full w-full items-center justify-center rounded bg-white'>
+        <span className='inline-block bg-gradient-to-r from-[#FF5655] to-[#D361FF] bg-clip-text text-sm font-medium leading-6 text-transparent'>
+          {text}
+        </span>
+      </span>
     </Button>
   )
 }

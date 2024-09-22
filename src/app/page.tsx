@@ -1,7 +1,6 @@
 "use client"
 
 import { yupResolver } from "@hookform/resolvers/yup"
-import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
@@ -15,8 +14,6 @@ import { GradientButton } from "@/components/ui/button/gradient-button"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { TypographyH7 } from "@/components/ui/typography/h4"
-
-import Upload from "../assets/svg/Upload.svg"
 
 const schema = yup.object().shape({
   userName: yup.string().required("User Name is required"),

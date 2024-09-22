@@ -32,9 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <RootProvider>
           {/* <Navbar /> */}
-
-          {children}
-
+          <main className='flex h-full w-full flex-col bg-[#f9f9f9]'>{children}</main>
           {/* <Footer /> */}
         </RootProvider>
       </body>

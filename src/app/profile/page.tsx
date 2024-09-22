@@ -33,48 +33,45 @@ const profiles = [
 
 export default function Profile() {
   return (
-    <>
-      <div className='py-10'>
-        <div className='flex flex-col items-center px-4'>
-          <Image
-            src={
-              "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            }
-            alt='Upload'
-            width={100}
-            height={100}
-            className='aspect-square rounded-full object-cover'
-          />
-          <div className='flex gap-2'>
-            <TypographyH7 className='text-medium font-medium leading-6'>Jajan James</TypographyH7>
-            <Image src={Verified} alt='Verified' width={24} height={24} />
+    <main className='flex h-full w-full flex-col items-center justify-between py-10'>
+      <div className='flex flex-col items-center px-4'>
+        <Image
+          src={
+            "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          }
+          alt='Upload'
+          width={100}
+          height={100}
+          className='aspect-square rounded-full object-cover'
+        />
+        <div className='flex gap-2'>
+          <TypographyH7 className='text-medium font-medium leading-6'>Jajan James</TypographyH7>
+          <Image src={Verified} alt='Verified' width={24} height={24} />
+        </div>
+        <Typography className='mb-2 text-xs font-normal leading-6 text-subTitleGray'>
+          Personal blog UX designer hyderabad
+        </Typography>
+        <div className='w-full'>
+          <div className='grid w-full grid-cols-3 justify-between gap-12 py-2'>
+            {profiles.map((profile, index) => {
+              return (
+                <div key={index} className='flex flex-col items-center justify-between'>
+                  <Image src={profile.image} width={40} height={40} alt={profile.id} />
+                  <p className='mb-1 mt-2 text-xs font-medium leading-normal'>{profile.id}</p>
+                  <p className='text-xs text-subTitleGray'>{profile.value}</p>
+                </div>
+              )
+            })}
           </div>
-          <Typography className='mb-2 text-xs font-normal leading-6 text-subTitleGray'>
-            Personal blog UX designer hyderabad
-          </Typography>
-          <div className='w-full'>
-            <HorizontalSeperator />
-            <div className='grid w-full grid-cols-3 justify-between py-2'>
-              {profiles.map((profile) => {
-                return (
-                  <div key={profile.id} className='flex flex-col items-center justify-between'>
-                    <Image src={profile.image} width={40} height={40} alt={profile.id} />
-                    <p className='text-xs font-medium leading-normal'>{profile.id}</p>
-                    <p className='text-xs text-subTitleGray'>{profile.value}</p>
-                  </div>
-                )
-              })}
-            </div>
-            <HorizontalSeperator />
-          </div>
+          <HorizontalSeperator />
+        </div>
 
-          <div className='mt-5 w-full'>
-            <Link href={"/giveaway-create"}>
-              <GradientFillButton text='Create Giveaway' />
-            </Link>
-          </div>
+        <div className='mt-5 w-full'>
+          <Link href={"/giveaway-create"}>
+            <GradientFillButton text='Create Giveaway' />
+          </Link>
         </div>
       </div>
-    </>
+    </main>
   )
 }
