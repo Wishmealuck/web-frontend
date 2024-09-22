@@ -5,6 +5,7 @@ import { useState } from "react"
 
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 
 import { AddLinks } from "@/components/forms/add-links"
@@ -35,16 +36,18 @@ const defaultValues = {
 }
 
 export default function GiveawayCreate() {
+  const router = useRouter()
   const form = useForm({
     defaultValues
   })
   function onSubmit() {
-    console.log("")
+    router.push(`giveaway/1`)
   }
+
   const [showEnd, setShowEnd] = useState(false)
   return (
     <div className='flex h-full w-full flex-col items-center justify-between py-10'>
-      <div className='w-full max-w-sm bg-white p-6 shadow-sm'>
+      <div className='w-full p-4 lg:max-w-sm lg:bg-white lg:p-6 lg:shadow-sm'>
         <TypographyH7 className='mb-6 text-lg font-extrabold'>Create a Giveaway</TypographyH7>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
@@ -156,7 +159,9 @@ export default function GiveawayCreate() {
                 <UploadFiles control={form.control} />
               </div>
             </div>
-            <Button className='my-4 flex w-full'>Create a Giveaway</Button>
+            <Button type='submit' className='my-4 flex w-full'>
+              Create a Giveaway
+            </Button>
           </form>
         </Form>
       </div>

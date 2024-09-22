@@ -1,3 +1,3 @@
-export default function GiveawayDetailedLayout() {
-  return <div></div>
+export default function GiveawayDetailedLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }

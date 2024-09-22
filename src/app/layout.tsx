@@ -29,10 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href='https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'
           rel='stylesheet'
         />
-
         <RootProvider>
           {/* <Navbar /> */}
-          <main className='flex h-full w-full flex-col bg-[#f9f9f9]'>{children}</main>
+          <main className='flex h-full w-full flex-col overflow-y-auto lg:bg-[#f9f9f9]'>
+            {children}
+          </main>
           {/* <Footer /> */}
         </RootProvider>
       </body>

@@ -30,8 +30,10 @@ const config = {
         endText: "#8E8E8E",
         subTitleGray: "#939393",
         border: "#0F172A",
+        inputBlue: "#E8F1FF",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        darkText: "010101",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
