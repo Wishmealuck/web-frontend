@@ -2,8 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 import { GradientFillButton } from "@/components/ui/button/gradient-button-fill"
+import { GiveawayCard } from "@/components/ui/cards/give-away-card"
 import { HorizontalSeperator } from "@/components/ui/seperator/horizontal-with-text"
 import { Typography } from "@/components/ui/typography"
 import { TypographyH7 } from "@/components/ui/typography/h4"
@@ -32,6 +34,10 @@ const profiles = [
 ]
 
 export default function Profile() {
+  const router = useRouter()
+  function handleView() {
+    router.push(`/giveaway/1`)
+  }
   return (
     <main className='flex h-full w-full flex-col items-center justify-between py-10'>
       <div className='flex flex-col items-center px-4'>
@@ -70,6 +76,11 @@ export default function Profile() {
           <Link href={"/giveaway-create"}>
             <GradientFillButton text='Create Giveaway' />
           </Link>
+        </div>
+
+        <div className='my-3 flex w-full flex-col gap-2'>
+          <GiveawayCard handleView={handleView} />
+          <GiveawayCard handleView={handleView} />
         </div>
       </div>
     </main>

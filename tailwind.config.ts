@@ -27,6 +27,7 @@ const config = {
         highlightBlue: "rgba(93, 156, 244, 1)",
         grayLight: "#B8B8B8",
         grayDark: "#555",
+        endText: "#8E8E8E",
         subTitleGray: "#939393",
         border: "#0F172A",
         input: "hsl(var(--input))",
