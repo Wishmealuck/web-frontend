@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { GradientFillButton } from "@/components/ui/button/gradient-button-fill"
 import { ShareInSocials } from "@/components/ui/cards/share-in-social-card"
 import { GradientCountdown } from "@/components/ui/countdown/GradientCountdown"
-import { FormLabel } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Typography } from "@/components/ui/typography"
 
@@ -72,7 +71,7 @@ export default function GiveawayDetailed() {
             </div>
           </div>
 
-          <div className='flex w-full justify-between gap-2'>
+          <div className='mt-5 flex w-full justify-between gap-2'>
             <Button onClick={handleEdit} className='flex-grow' variant={"outline"}>
               Edit
             </Button>

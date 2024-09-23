@@ -25,6 +25,7 @@ const config = {
       colors: {
         textColor: "#0F172A",
         highlightBlue: "rgba(93, 156, 244, 1)",
+        deleteRed: "rgba(255, 86, 85, 1)",
         grayLight: "#B8B8B8",
         grayDark: "#555",
         endText: "#8E8E8E",

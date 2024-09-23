@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from "next"
 
 import config from "_config"
 
+import { Toaster } from "@/components/ui/toaster"
 import RootProvider from "@/providers/root"
 
 export const metadata: Metadata = {
@@ -31,9 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <RootProvider>
           {/* <Navbar /> */}
-          <main className='flex h-full w-full flex-col overflow-y-auto lg:bg-[#f9f9f9]'>
-            {children}
-          </main>
+          <main className='flex h-full w-full flex-col lg:bg-[#f9f9f9]'>{children}</main>
+          <Toaster />
           {/* <Footer /> */}
         </RootProvider>
       </body>

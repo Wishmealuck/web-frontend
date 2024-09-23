@@ -46,8 +46,8 @@ export default function GiveawayCreate() {
 
   const [showEnd, setShowEnd] = useState(false)
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between py-10'>
-      <div className='w-full p-4 lg:max-w-sm lg:bg-white lg:p-6 lg:shadow-sm'>
+    <div className='flex h-fit w-full flex-col items-center justify-center py-10 align-middle'>
+      <div className='w-full p-4 lg:max-w-sm lg:rounded-lg lg:bg-white lg:p-6 lg:shadow-sm'>
         <TypographyH7 className='mb-6 text-lg font-extrabold'>Create a Giveaway</TypographyH7>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
