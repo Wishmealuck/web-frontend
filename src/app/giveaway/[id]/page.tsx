@@ -21,8 +21,8 @@ export default function GiveawayDetailed() {
     console.log("")
   }
   return (
-    <main className='flex h-full w-full flex-col items-center justify-between py-10'>
-      <div className='w-full p-4 lg:max-w-sm lg:bg-white lg:p-6 lg:shadow-sm'>
+    <div className='flex h-fit w-full flex-col items-center justify-center py-10 align-middle'>
+      <div className='w-full p-4 lg:max-w-sm lg:rounded-lg lg:bg-white lg:p-6 lg:shadow-sm'>
         <div className='flex flex-col items-center justify-center gap-2'>
           <div>
             <GradientCountdown textSize='text-4xl' />
@@ -92,6 +92,6 @@ export default function GiveawayDetailed() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

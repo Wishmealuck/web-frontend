@@ -39,8 +39,8 @@ export default function Profile() {
     router.push(`/giveaway/1`)
   }
   return (
-    <main className='flex h-full w-full flex-col items-center justify-between py-10'>
-      <div className='flex flex-col items-center px-4'>
+    <div className='flex h-fit w-full flex-col items-center justify-center py-10 align-middle'>
+      <div className='w-full p-4 lg:max-w-sm lg:rounded-lg lg:bg-white lg:p-6 lg:shadow-sm'>
         <Image
           src={
             "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -83,6 +83,6 @@ export default function Profile() {
           <GiveawayCard handleView={handleView} />
         </div>
       </div>
-    </main>
+    </div>
   )
 }

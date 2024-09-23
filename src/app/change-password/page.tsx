@@ -27,40 +27,43 @@ export default function ChangePassword() {
     router.push("/")
   }
   return (
-    <div className='mt-16 w-full p-4 lg:w-1/3'>
-      <TypographyH7 className='mb-6 text-lg font-extrabold'>Create new Password</TypographyH7>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-          <FormField
-            control={form.control}
-            name='password'
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder='New Password' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <div className='flex h-fit w-full flex-col items-center justify-center py-10 align-middle'>
+      <div className='w-full p-4 lg:max-w-sm lg:rounded-lg lg:bg-white lg:p-6 lg:shadow-sm'>
+        {" "}
+        <TypographyH7 className='mb-6 text-lg font-extrabold'>Create new Password</TypographyH7>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
+            <FormField
+              control={form.control}
+              name='password'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder='New Password' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name='re_password'
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder='Re-enter New Password' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button className='w-full' type='submit'>
-            Login
-          </Button>
-        </form>
-      </Form>
+            <FormField
+              control={form.control}
+              name='re_password'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder='Re-enter New Password' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button className='w-full' type='submit'>
+              Login
+            </Button>
+          </form>
+        </Form>
+      </div>
     </div>
   )
 }

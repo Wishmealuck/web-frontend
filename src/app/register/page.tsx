@@ -35,70 +35,72 @@ const Register = () => {
   }
 
   return (
-    <div className='mt-16 w-full p-4 lg:w-1/3'>
-      <TypographyH7 className='mb-6 text-lg font-extrabold'>Create An Account</TypographyH7>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-          <FormField
-            control={form.control}
-            name='email'
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder='Email' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name='password'
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder='Create password' type='password' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button className='w-full' type='submit'>
-            Create an account
-          </Button>
-          <div className=''>
-            <HorizontalSeperator text='or' />
-          </div>
-          <LoginOptionsContainers text='Google' image={Google as string} />
-          <LoginOptionsContainers text='Apple' image={Apple as string} />
-          <div className='text-center'>
-            <Typography className='text-medium font-normal leading-6'>
-              Already have an account?{" "}
-              <span className='text-highlightBlue'>
-                <Link href={"/login"}>Login</Link>
-              </span>
+    <div className='flex h-fit w-full flex-col items-center justify-center py-10 align-middle'>
+      <div className='w-full p-4 lg:max-w-sm lg:rounded-lg lg:bg-white lg:p-6 lg:shadow-sm'>
+        <TypographyH7 className='mb-6 text-lg font-extrabold'>Create An Account</TypographyH7>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
+            <FormField
+              control={form.control}
+              name='email'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder='Email' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='password'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder='Create password' type='password' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button className='w-full' type='submit'>
+              Create an account
+            </Button>
+            <div className=''>
+              <HorizontalSeperator text='or' />
+            </div>
+            <LoginOptionsContainers text='Google' image={Google as string} />
+            <LoginOptionsContainers text='Apple' image={Apple as string} />
+            <div className='text-center'>
+              <Typography className='text-medium font-normal leading-6'>
+                Already have an account?{" "}
+                <span className='text-highlightBlue'>
+                  <Link href={"/login"}>Login</Link>
+                </span>
+              </Typography>
+            </div>
+            <Typography className='text-center text-xs leading-4 text-grayLight'>
+              Your privacy matters. We ensure a secure and transparent experience, every time.
             </Typography>
-          </div>
-          <Typography className='text-center text-xs leading-4 text-grayLight'>
-            Your privacy matters. We ensure a secure and transparent experience, every time.
-          </Typography>
-          <Typography className='text-center text-xl font-medium leading-6 text-grayLight'>
-            Trusted By 1000+ influencer
-          </Typography>
+            <Typography className='text-center text-xl font-medium leading-6 text-grayLight'>
+              Trusted By 1000+ influencer
+            </Typography>
 
-          <div className='flex justify-center gap-1.5'>
-            <div className='text-sm font-medium leading-6 text-grayLight'>Crafted with</div>
-            <span>
-              <Image src={Love} alt='Love' />
-            </span>
-            <div className='text-sm font-medium leading-6 text-grayLight'>in Kerala, India</div>
-          </div>
-          <div className='text-center text-xs font-normal leading-4 text-grayLight'>
-            Contact us at <span className='text-highlightBlue'>support@wishmealuck.com</span> , and
-            we&apos;ll get back to you within 4 hours.
-          </div>
-        </form>
-      </Form>
+            <div className='flex justify-center gap-1.5'>
+              <div className='text-sm font-medium leading-6 text-grayLight'>Crafted with</div>
+              <span>
+                <Image src={Love} alt='Love' />
+              </span>
+              <div className='text-sm font-medium leading-6 text-grayLight'>in Kerala, India</div>
+            </div>
+            <div className='text-center text-xs font-normal leading-4 text-grayLight'>
+              Contact us at <span className='text-highlightBlue'>support@wishmealuck.com</span> ,
+              and we&apos;ll get back to you within 4 hours.
+            </div>
+          </form>
+        </Form>
+      </div>
     </div>
   )
 }
