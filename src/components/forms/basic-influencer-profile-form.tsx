@@ -8,7 +8,8 @@ import { useRef } from "react"
 import Image from "next/image"
 import { type Control } from "react-hook-form"
 
-import Upload from "../../assets/svg/Upload.svg"
+import Upload from "@/assets/svg/Upload.svg"
+
 import { FormControl, FormField, FormItem, FormMessage } from "../ui/form"
 import { Input } from "../ui/input"
 

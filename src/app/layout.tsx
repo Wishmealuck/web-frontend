@@ -31,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel='stylesheet'
         />
         <RootProvider>
-          {/* <Navbar /> */}
           <main className='flex h-full w-full flex-col overflow-y-auto lg:bg-[#f9f9f9]'>
             {children}
           </main>

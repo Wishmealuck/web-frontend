@@ -50,9 +50,6 @@ export const AddLinks = ({ control }: Props) => {
               <Image src={Delete} width={12} height={12} alt='Delete' />
             </div>
           </div>
-          {/* <Button onClick={() => remove(index)} variant={"destructive"}>
-            Delete
-          </Button> */}
         </div>
       ))}
       <GradientFillButton text='Add More Links' onClick={handleAddLink} />

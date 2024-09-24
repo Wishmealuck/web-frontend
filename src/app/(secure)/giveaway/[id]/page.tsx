@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 
+import Banner from "@/assets/svg/Banner.svg"
 import { CraftedWithLove } from "@/components/brandings/crafted-with-love"
 import { TrustedBy } from "@/components/brandings/trusted-by"
 import { Button } from "@/components/ui/button"
@@ -10,8 +11,6 @@ import { ShareInSocials } from "@/components/ui/cards/share-in-social-card"
 import { GradientCountdown } from "@/components/ui/countdown/GradientCountdown"
 import { Input } from "@/components/ui/input"
 import { Typography } from "@/components/ui/typography"
-
-import Banner from "../../../assets/svg/Banner.svg"
 
 export default function GiveawayDetailed() {
   function handleEdit() {

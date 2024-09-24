@@ -4,16 +4,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
+import Instagram from "@/assets/socials/Instagram.svg"
+import Twitter from "@/assets/socials/Twitter.svg"
+import YouTube from "@/assets/socials/Youtube.svg"
+import Verified from "@/assets/svg/Verified.svg"
 import { GradientFillButton } from "@/components/ui/button/gradient-button-fill"
 import { GiveawayCard } from "@/components/ui/cards/give-away-card"
 import { HorizontalSeperator } from "@/components/ui/seperator/horizontal-with-text"
 import { Typography } from "@/components/ui/typography"
 import { TypographyH7 } from "@/components/ui/typography/h4"
-
-import Instagram from "../../assets/socials/Instagram.svg"
-import Twitter from "../../assets/socials/Twitter.svg"
-import YouTube from "../../assets/socials/Youtube.svg"
-import Verified from "../../assets/svg/Verified.svg"
 
 const profiles = [
   {

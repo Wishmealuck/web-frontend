@@ -1,13 +1,13 @@
 import type { Control } from "react-hook-form"
 
+import Image from "next/image"
 import { useFieldArray } from "react-hook-form"
 
-import { Button } from "../ui/button"
-import { GradientFillButton } from "../ui/button/gradient-button-fill"
+import Delete from "@/assets/svg/Delete.svg"
+
 import { GradientIconText } from "../ui/button/gradient-text-icon"
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
 import { Input } from "../ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -42,9 +42,13 @@ export const AddRules = ({ control }: Props) => {
               </FormItem>
             )}
           />
-          <Button onClick={() => remove(index)} variant={"destructive"}>
-            Delete
-          </Button>
+          <div onClick={() => remove(index)} className='flex cursor-pointer items-center gap-1'>
+            <p className='text-xs font-medium leading-6 text-deleteRed'>Delete</p>
+
+            <div>
+              <Image src={Delete} width={12} height={12} alt='Delete' />
+            </div>
+          </div>
         </div>
       ))}
       <GradientIconText text='Add More Rules' onClick={handleAddRule} />

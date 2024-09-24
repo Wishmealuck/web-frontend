@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from "react-share"
 
-import Instagram from "../../../assets/socials/Instagram.svg"
+import Instagram from "@/assets/socials/Instagram.svg"
 
 const url = "https://wishmealuck.netlify.net/"
 

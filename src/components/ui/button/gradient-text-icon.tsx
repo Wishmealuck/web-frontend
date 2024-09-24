@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import GradientAdd from "../../../assets/svg/AddGradient.svg"
+import GradientAdd from "@/assets/svg/AddGradient.svg"
 
 export const GradientIconText = ({ text, onClick }: { text: string; onClick?: () => void }) => {
   return (

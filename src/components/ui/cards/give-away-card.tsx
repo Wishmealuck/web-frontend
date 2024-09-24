@@ -1,7 +1,8 @@
 import Image from "next/image"
 
-import Eye from "../../../assets/svg/Eye.svg"
-import Giveaway from "../../../assets/svg/GiveAwayPoster.svg"
+import Eye from "@/assets/svg/Eye.svg"
+import Giveaway from "@/assets/svg/GiveAwayPoster.svg"
+
 import { Button } from "../button"
 import { GradientCountdown } from "../countdown/GradientCountdown"
 

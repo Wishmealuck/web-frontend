@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import Love from "../../assets/svg/Love.svg"
+import Love from "@/assets/svg/Love.svg"
 
 export const CraftedWithLove = () => {
   return (

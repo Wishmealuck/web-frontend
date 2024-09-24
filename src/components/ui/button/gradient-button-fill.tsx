@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import Add from "../../../assets/svg/Add.svg"
+import Add from "@/assets/svg/Add.svg"
 
 interface Props {
   text: string
