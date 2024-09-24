@@ -4,15 +4,19 @@ import Eye from "@/assets/svg/Eye.svg"
 import Giveaway from "@/assets/svg/GiveAwayPoster.svg"
 
 import { Button } from "../button"
+import { GradientFillButton } from "../button/gradient-button-fill"
 import { GradientCountdown } from "../countdown/GradientCountdown"
 
 interface Props {
-  handleView: () => void
+  handleView?: () => void
   handleEdit?: () => void
+  handleJoin?: () => void
+  variant?: "user" | "influencer"
 }
 
 export const GiveawayCard = (props: Props) => {
-  const { handleEdit, handleView } = props
+  const { handleEdit, handleView, handleJoin, variant = "influencer" } = props
+  const isUser = variant === "user"
   return (
     <div className='flex justify-between gap-4 rounded-[12px] border border-solid border-[rgba(0,0,0,0.07)] bg-white py-3 pl-2 pr-3 shadow-[0_3px_18px_0_rgba(0,0,0,0.10)]'>
       {" "}
@@ -31,14 +35,18 @@ export const GiveawayCard = (props: Props) => {
           <GradientCountdown />
           <div className='text-xs font-medium leading-normal text-endText'>END IN 25-12-2024</div>
         </div>
-        <div className='flex w-full justify-between gap-2'>
-          <Button onClick={handleEdit} className='flex-grow' variant={"outline"}>
-            Edit
-          </Button>
-          <Button onClick={handleView} className='flex-grow'>
-            View
-          </Button>
-        </div>
+        {isUser ? (
+          <GradientFillButton onClick={handleJoin} text='Join Now' hideIcon />
+        ) : (
+          <div className='flex w-full justify-between gap-2'>
+            <Button onClick={handleEdit} className='flex-grow' variant={"outline"}>
+              Edit
+            </Button>
+            <Button onClick={handleView} className='flex-grow'>
+              View
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   )

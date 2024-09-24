@@ -1,6 +1,9 @@
 import type { Control } from "react-hook-form"
 
+import Image from "next/image"
 import { useFieldArray } from "react-hook-form"
+
+import Delete from "@/assets/svg/Delete.svg"
 
 import { Button } from "../ui/button"
 import { FormControl, FormField, FormItem, FormMessage } from "../ui/form"
@@ -63,9 +66,16 @@ export const AddSocials = ({ control }: Props) => {
               </FormItem>
             )}
           />
-          <Button onClick={() => remove(index)} variant={"destructive"}>
+          <div onClick={() => remove(index)} className='flex cursor-pointer items-center gap-1'>
+            <p className='text-xs font-medium leading-6 text-deleteRed'>Delete</p>
+
+            <div>
+              <Image src={Delete} width={12} height={12} alt='Delete' />
+            </div>
+          </div>
+          {/* <Button onClick={() => remove(index)} variant={"destructive"}>
             Delete
-          </Button>
+          </Button> */}
         </div>
       ))}
       <button

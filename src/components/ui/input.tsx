@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable react/prop-types */
 import * as React from "react"
 
@@ -16,6 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProperties>(
         )}
         ref={reference}
         {...properties}
+        onWheel={(e) => e.currentTarget.blur()}
       />
     )
   }

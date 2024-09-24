@@ -1,6 +1,9 @@
 import type { Control } from "react-hook-form"
 
+import Image from "next/image"
 import { useFieldArray } from "react-hook-form"
+
+import Delete from "@/assets/svg/Delete.svg"
 
 import { Button } from "../ui/button"
 import { GradientIconText } from "../ui/button/gradient-text-icon"
@@ -42,9 +45,13 @@ export const UploadFiles = (props: Props) => {
                 </FormItem>
               )}
             />
-            <Button onClick={() => remove(index)} variant={"destructive"}>
-              Delete
-            </Button>
+            <div onClick={() => remove(index)} className='flex cursor-pointer items-center gap-1'>
+              <p className='text-xs font-medium leading-6 text-deleteRed'>Delete</p>
+
+              <div>
+                <Image src={Delete} width={12} height={12} alt='Delete' />
+              </div>
+            </div>
           </div>
         ))}
         <GradientIconText text='Add More Files' onClick={handleAddRule} />

@@ -12,7 +12,7 @@ export const GradientFillButton = (props: Props) => {
   const { text, onClick, hideIcon } = props
   return (
     <button
-      type='button'
+      type='submit'
       onClick={onClick}
       className='flex w-full items-center justify-center gap-2 rounded-sm bg-gradient-red-purple px-4 py-2 text-white'
     >
