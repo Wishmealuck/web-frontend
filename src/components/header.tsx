@@ -56,7 +56,13 @@ export const Header = (props: Props) => {
             <SheetHeader>
               <SheetTitle>
                 {" "}
-                <Image src={Logo} width={36} height={36} alt='Logo' />
+                <div className='flex items-center gap-2'>
+                  <Image src={Logo} width={36} height={36} alt='Logo' />
+                  <div className='flex flex-col items-center'>
+                    <Typography className='text-xs font-bold text-textColor'>Wish me a</Typography>
+                    <Typography className='text-xs font-bold text-textColor'>luck.</Typography>
+                  </div>
+                </div>{" "}
               </SheetTitle>
             </SheetHeader>
             <div className='my-4'>
